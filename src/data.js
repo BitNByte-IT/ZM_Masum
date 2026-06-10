@@ -18,6 +18,7 @@ export const profile = {
   phone: "+8801922552100",          // <-- put real number (used for tel: link)
   phoneDisplay: "+880 1922-552100", // <-- shown on screen
   email: "zmmasum007@gamil.com",       // <-- real email (used for mailto:)
+  zsmWebsite: "https://zsmtransport.com", // <-- ZSM Transport website URL
 };
 
 // Current & past positions. Reorder, add, or remove freely.
