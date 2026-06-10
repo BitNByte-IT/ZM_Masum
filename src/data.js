@@ -11,14 +11,16 @@ export const profile = {
   intro:
     "Transport entrepreneur with hands-on command of fleet operations and the full vehicle-documentation lifecycle - tax, token, fitness, and route permits - handled end to end so owners never face a paperwork delay.",
   // Replace with your portrait. Square image looks best (e.g. 800×800).
-  photo: "images/portrait.jpg",
+  photo: "/images/portrait.jpg",
   location: "Dhaka, Bangladesh",
 
   // CTA contacts
-  phone: "+8801922552100",          // <-- put real number (used for tel: link)
-  phoneDisplay: "+880 1922-552100", // <-- shown on screen
-  email: "zmmasum007@gamil.com",       // <-- real email (used for mailto:)
-  zsmWebsite: "https://zsmtransport.com", // <-- ZSM Transport website URL
+  phone: "+8801576925951",           // <-- call number (used for tel: link)
+  phoneDisplay: "+880 1576-925951",  // <-- shown on screen
+  whatsapp: "+8801922552100",        // <-- WhatsApp number
+  whatsappDisplay: "+880 1922-552100",
+  email: "zmmasum007@gamil.com",     // <-- real email (used for mailto:)
+  zsmWebsite: "https://zsm-transport-agency.vercel.app/", // <-- ZSM Transport website URL
 };
 
 // Current & past positions. Reorder, add, or remove freely.
@@ -29,7 +31,7 @@ export const roles = [
     period: "Present",
     current: true,
     note: "Founded and leads the agency’s fleet operations and client documentation services.",
-    image: "images/zsm.jpg", // optional agency image
+    image: "/images/zsm.jpg",
   },
   {
     company: "Alishan Transport",
@@ -37,15 +39,15 @@ export const roles = [
     period: "Present",
     current: true,
     note: "Co-founded the company and directs route management and partner coordination.",
-    image: "images/alishan.jpg",
+    image: "/images/alishan.jpg",
   },
   {
     company: "Sonar Bangla Transport Agency",
-    position: "Former — Operations",
+    position: "Former - Operations",
     period: "Past",
     current: false,
     note: "Built early experience in transport operations and documentation handling.",
-    image: "images/sonarbangla.jpg",
+    image: "/images/sonarbangla.jpg",
   },
 ];
 
@@ -78,7 +80,7 @@ export const stats = [
 
 // Optional gallery — drop transport / fleet photos here.
 export const gallery = [
-  { src: "images/fleet-1.jpg", caption: "Fleet on route" },
-  { src: "images/fleet-2.jpg", caption: "Loading operations" },
-  { src: "images/fleet-3.jpg", caption: "Documentation desk" },
+  { src: "/images/fleet-1.jpg", caption: "Fleet on route" },
+  { src: "/images/fleet-2.jpg", caption: "Loading operations" },
+  { src: "/images/fleet-3.jpg", caption: "Documentation desk" },
 ];
