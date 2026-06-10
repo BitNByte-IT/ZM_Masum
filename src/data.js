@@ -5,19 +5,19 @@
 // ───────────────────────────────────────────────────────────────
 
 export const profile = {
-  name: "Z M Masum",
+  name: "ZM Masum",
   tagline: "Transport Agency Leader",
   headline: "Keeping vehicles legal, documented, and on the road.",
   intro:
-    "Transport entrepreneur with hands-on command of fleet operations and the full vehicle-documentation lifecycle — tax, token, fitness, and route permits — handled end to end so owners never face a paperwork delay.",
+    "Transport entrepreneur with hands-on command of fleet operations and the full vehicle-documentation lifecycle - tax, token, fitness, and route permits - handled end to end so owners never face a paperwork delay.",
   // Replace with your portrait. Square image looks best (e.g. 800×800).
   photo: "images/portrait.jpg",
   location: "Dhaka, Bangladesh",
 
   // CTA contacts
-  phone: "+8801XXXXXXXXX",          // <-- put real number (used for tel: link)
-  phoneDisplay: "+880 1XXX-XXXXXX", // <-- shown on screen
-  email: "masum@example.com",       // <-- real email (used for mailto:)
+  phone: "+8801922552100",          // <-- put real number (used for tel: link)
+  phoneDisplay: "+880 1922-552100", // <-- shown on screen
+  email: "zmmasum007@gamil.com",       // <-- real email (used for mailto:)
 };
 
 // Current & past positions. Reorder, add, or remove freely.
@@ -56,7 +56,7 @@ export const services = [
   },
   {
     title: "Token Renewal",
-    desc: "Tracking and renewing road tokens before they lapse — no gaps.",
+    desc: "Tracking and renewing road tokens before they lapse - no gaps.",
   },
   {
     title: "Route Permit",
@@ -71,7 +71,7 @@ export const services = [
 // Quick proof stats. Edit numbers/labels as you like.
 export const stats = [
   { value: "2", label: "Companies founded" },
-  { value: "10+", label: "Years in transport" },
+  { value: "20+", label: "Years in transport" },
   { value: "100%", label: "Documents handled in-house" },
 ];
 
