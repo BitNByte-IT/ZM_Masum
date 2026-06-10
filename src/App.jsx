@@ -1,10 +1,15 @@
 import { useState, useEffect } from "react";
 import { profile, roles, services, stats, gallery } from "./data.js";
 
+const BASE = import.meta.env.BASE_URL;
+const asset = (path) => `${BASE}${path.replace(/^\//, "")}`;
+
 /* Renders the image or a placeholder slot — uses React state so it resets correctly when src changes. */
 function MediaSlot({ src, alt, imgClassName, label }) {
   const [failed, setFailed] = useState(false);
   useEffect(() => { setFailed(false); }, [src]);
+
+  const resolvedSrc = src.startsWith("http") ? src : asset(src);
 
   if (failed) {
     return (
@@ -15,7 +20,7 @@ function MediaSlot({ src, alt, imgClassName, label }) {
   }
   return (
     <img
-      src={src}
+      src={resolvedSrc}
       alt={alt}
       loading="lazy"
       className={imgClassName}
@@ -37,7 +42,7 @@ export default function App() {
         <div className="mx-auto max-w-5xl px-5 h-14 flex items-center justify-between">
           <a href="#top" className="flex items-center gap-2.5 font-display font-700 tracking-tight text-slate-100 hover:opacity-90 transition">
             <img
-              src="/brand.svg"
+              src={asset("brand.svg")}
               alt="ZM Masum logo"
               className="h-10 w-10"
             />
@@ -251,7 +256,7 @@ export default function App() {
           {/* Brand */}
           <div>
             <a href="#top" className="flex items-center gap-2.5 mb-4 hover:opacity-90 transition">
-              <img src="/brand.svg" alt="ZM Masum" className="h-10 w-10" />
+              <img src={asset("brand.svg")} alt="ZM Masum" className="h-10 w-10" />
               <span className="font-display font-700 text-lg text-slate-100 leading-none">
                 ZM <span className="text-gold">Masum</span>
               </span>

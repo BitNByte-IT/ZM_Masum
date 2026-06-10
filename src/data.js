@@ -11,7 +11,7 @@ export const profile = {
   intro:
     "An accomplished transport entrepreneur and business leader with extensive expertise in transport operations, commercial logistics, and regulatory compliance. Through ZSM Transport Agency and Alishan Transport, ZM Masum delivers professional consultancy and comprehensive document solutions, ensuring transport businesses and vehicle owners meet regulatory requirements with confidence, efficiency, and reliability.",
   // Replace with your portrait. Square image looks best (e.g. 800×800).
-  photo: "/images/portrait.jpg",
+  photo: "images/portrait.jpg",
   location: "Dhaka, Bangladesh",
 
   // CTA contacts
@@ -31,7 +31,7 @@ export const roles = [
     period: "Present",
     current: true,
     note: "Founded and leads the agency’s fleet operations and client documentation services.",
-    image: "/images/zsm.svg",
+    image: "images/zsm.svg",
   },
   {
     company: "Alishan Transport",
@@ -39,7 +39,7 @@ export const roles = [
     period: "Present",
     current: true,
     note: "Co-founded the company and directs route management and partner coordination.",
-    image: "/images/alishan.svg",
+    image: "images/alishan.svg",
   },
   {
     company: "Sonar Bangla Transport Agency",
@@ -47,7 +47,7 @@ export const roles = [
     period: "Past",
     current: false,
     note: "Built early experience in transport operations and documentation handling.",
-    image: "/images/sonarbangla.svg",
+    image: "images/sonarbangla.svg",
   },
 ];
 
@@ -80,7 +80,7 @@ export const stats = [
 
 // Optional gallery — drop transport / fleet photos here.
 export const gallery = [
-  { src: "/images/fleet-1.jpg", caption: "Fleet on route" },
-  { src: "/images/fleet-2.jpg", caption: "Loading operations" },
-  { src: "/images/fleet-3.jpg", caption: "Documentation desk" },
+  { src: "images/fleet-1.jpg", caption: "Fleet on route" },
+  { src: "images/fleet-2.jpg", caption: "Loading operations" },
+  { src: "images/fleet-3.jpg", caption: "Documentation desk" },
 ];
