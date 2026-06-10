@@ -38,8 +38,15 @@ export default function App() {
       {/* ── Top bar ─────────────────────────────────────────────── */}
       <header className="sticky top-0 z-30 backdrop-blur-md bg-ink/70 border-b border-line/70">
         <div className="mx-auto max-w-5xl px-5 h-14 flex items-center justify-between">
-          <a href="#top" className="font-display font-700 tracking-tight text-slate-100">
-            ZM<span className="text-gold">.</span>
+          <a href="#top" className="flex items-center gap-2.5 font-display font-700 tracking-tight text-slate-100 hover:opacity-90 transition">
+            <img
+              src="/brand.svg"
+              alt="ZM Masum logo"
+              className="h-10 w-10"
+            />
+            <span className="text-lg leading-none">
+              ZM <span className="text-gold">Masum</span>
+            </span>
           </a>
           <nav className="hidden sm:flex items-center gap-7 text-sm text-mute">
             <a className="hover:text-slate-100 transition" href="#about">About</a>
@@ -246,13 +253,70 @@ export default function App() {
       </main>
 
       <footer className="border-t border-line/60">
-        <div className="mx-auto max-w-5xl px-5 py-8 flex flex-col sm:flex-row items-center justify-between gap-3 text-sm text-mute">
-          <p>
-            © {new Date().getFullYear()} {profile.name}. All rights reserved.
-          </p>
-          <p>
-            ZSM Transport Agency · Alishan Transport
-          </p>
+        {/* ── Footer main ───────────────────────────────────────── */}
+        <div className="mx-auto max-w-5xl px-5 py-14 grid sm:grid-cols-3 gap-10 border-b border-line/40">
+          {/* Brand */}
+          <div>
+            <a href="#top" className="flex items-center gap-2.5 mb-4 hover:opacity-90 transition">
+              <img src="/brand.svg" alt="ZM Masum" className="h-10 w-10" />
+              <span className="font-display font-700 text-lg text-slate-100 leading-none">
+                ZM <span className="text-gold">Masum</span>
+              </span>
+            </a>
+            <p className="text-mute text-sm leading-relaxed mb-1">{profile.tagline}</p>
+            <p className="text-mute/60 text-xs uppercase tracking-widest">{profile.location}</p>
+          </div>
+
+          {/* Quick links */}
+          <div>
+            <h4 className="text-xs font-700 uppercase tracking-widest text-mute/70 mb-4">
+              Navigation
+            </h4>
+            <nav className="flex flex-col gap-2.5 text-sm">
+              {["About", "Roles", "Services", "Contact"].map((item) => (
+                <a
+                  key={item}
+                  href={`#${item.toLowerCase()}`}
+                  className="text-mute hover:text-gold transition w-fit"
+                >
+                  {item}
+                </a>
+              ))}
+            </nav>
+          </div>
+
+          {/* Contact */}
+          <div>
+            <h4 className="text-xs font-700 uppercase tracking-widest text-mute/70 mb-4">
+              Get in touch
+            </h4>
+            <div className="flex flex-col gap-3 text-sm">
+              <a href={telHref} className="text-mute hover:text-gold transition">
+                {profile.phoneDisplay}
+              </a>
+              <a href={mailHref} className="text-mute hover:text-gold transition break-all">
+                {profile.email}
+              </a>
+              <p className="text-mute/50 text-xs mt-1 leading-relaxed">
+                ZSM Transport Agency<br />Alishan Transport
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* ── Copyright bar ─────────────────────────────────────── */}
+        <div className="mx-auto max-w-5xl px-5 py-5 flex flex-col sm:flex-row items-center justify-between gap-3 text-sm text-mute">
+          <p>© {new Date().getFullYear()} {profile.name}. All rights reserved.</p>
+          <a
+            href="https://bitnbyteit.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block"
+          >
+            <span className="font-semibold bg-gradient-to-r from-blue-500 to-orange-500 bg-clip-text text-transparent hover:opacity-80 transition-opacity">
+              Powered by BitNByte IT
+            </span>
+          </a>
         </div>
       </footer>
     </div>
