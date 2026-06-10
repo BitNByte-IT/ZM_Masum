@@ -154,11 +154,7 @@ export default function App() {
                     imgClassName="h-full w-full object-cover group-hover:scale-105 transition duration-500"
                     label={`Add image → ${r.image}`}
                   />
-                  {r.current && (
-                    <span className="absolute top-3 left-3 text-[11px] font-600 rounded-full bg-gold/90 text-ink px-2.5 py-1">
-                      Current
-                    </span>
-                  )}
+         
                 </div>
                 <div className="p-5">
                   <h3 className="font-display font-700 text-lg text-slate-50">
@@ -166,9 +162,9 @@ export default function App() {
                   </h3>
                   <p className="text-azureSoft text-sm font-600 mt-0.5">{r.position}</p>
                   <p className="text-mute text-sm mt-3 leading-relaxed">{r.note}</p>
-                  <p className="text-xs text-mute/70 mt-3 uppercase tracking-wider">
+                  {/* <p className="text-xs text-mute/70 mt-3 uppercase tracking-wider">
                     {r.period}
-                  </p>
+                  </p> */}
                 </div>
               </article>
             ))}
@@ -178,9 +174,9 @@ export default function App() {
         {/* ── Services ──────────────────────────────────────────── */}
         <section id="services" className="py-16 border-t border-line/60">
           <h2 className="font-display font-700 text-2xl sm:text-3xl text-slate-50 mb-2">
-            Documentation handled
+            Regulatory Compliance Expertise
           </h2>
-          <p className="text-mute mb-8">Every paper a vehicle needs, managed in-house.</p>
+          <p className="text-mute mb-8">Comprehensive advisory and execution services covering vehicle documentation and regulatory compliance for transport businesses and vehicle owners.</p>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {services.map((s, i) => (
               <div
