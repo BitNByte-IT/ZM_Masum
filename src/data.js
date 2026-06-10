@@ -6,21 +6,21 @@
 
 export const profile = {
   name: "ZM Masum",
-  tagline: "Transport Agency Leader",
-  headline: "Keeping vehicles legal, documented, and on the road.",
+  tagline: "Transport Entrepreneur & Compliance Consultant",
+  headline: "Delivering trusted transport solutions through leadership, compliance, and operational excellence.",
   intro:
-    "Transport entrepreneur with hands-on command of fleet operations and the full vehicle-documentation lifecycle - tax, token, fitness, and route permits - handled end to end so owners never face a paperwork delay.",
+    "An accomplished transport entrepreneur and business leader with extensive expertise in transport operations, commercial logistics, and regulatory compliance. Through ZSM Transport Agency and Alishan Transport, ZM Masum delivers professional consultancy and comprehensive document solutions, ensuring transport businesses and vehicle owners meet regulatory requirements with confidence, efficiency, and reliability.",
   // Replace with your portrait. Square image looks best (e.g. 800×800).
   photo: "/images/portrait.jpg",
   location: "Dhaka, Bangladesh",
 
   // CTA contacts
-  phone: "+8801576925951",           // <-- call number (used for tel: link)
-  phoneDisplay: "+880 1576-925951",  // <-- shown on screen
-  whatsapp: "+8801922552100",        // <-- WhatsApp number
+  phone: "+8801576925951",      
+  phoneDisplay: "+880 1576-925951",  
+  whatsapp: "+8801922552100", 
   whatsappDisplay: "+880 1922-552100",
-  email: "zmmasum007@gamil.com",     // <-- real email (used for mailto:)
-  zsmWebsite: "https://zsm-transport-agency.vercel.app/", // <-- ZSM Transport website URL
+  email: "zmmasum007@gamil.com",     
+  zsmWebsite: "https://zsm-transport-agency.vercel.app/",
 };
 
 // Current & past positions. Reorder, add, or remove freely.
@@ -31,7 +31,7 @@ export const roles = [
     period: "Present",
     current: true,
     note: "Founded and leads the agency’s fleet operations and client documentation services.",
-    image: "/images/zsm.jpg",
+    image: "/images/zsm.svg",
   },
   {
     company: "Alishan Transport",
@@ -39,7 +39,7 @@ export const roles = [
     period: "Present",
     current: true,
     note: "Co-founded the company and directs route management and partner coordination.",
-    image: "/images/alishan.jpg",
+    image: "/images/alishan.svg",
   },
   {
     company: "Sonar Bangla Transport Agency",
@@ -47,7 +47,7 @@ export const roles = [
     period: "Past",
     current: false,
     note: "Built early experience in transport operations and documentation handling.",
-    image: "/images/sonarbangla.jpg",
+    image: "/images/sonarbangla.svg",
   },
 ];
 

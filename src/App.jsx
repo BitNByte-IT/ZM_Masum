@@ -225,11 +225,10 @@ export default function App() {
             <div className="absolute inset-0 road-lines opacity-10" />
             <div className="relative">
               <h2 className="font-display font-800 text-3xl sm:text-4xl text-slate-50">
-                Need your vehicle papers sorted?
+                Let's Build Better Transport Solutions
               </h2>
               <p className="text-mute mt-4 max-w-lg mx-auto text-lg">
-                Call or email {profile.name.split(" ").slice(-1)} directly — tax, token, and
-                route permits handled without the hassle.
+           Connect with {profile.name} for transport consultancy, commercial logistics partnerships, regulatory compliance, and professional documentation services backed by years of industry experience and a trusted execution network.
               </p>
               <div className="mt-8 flex flex-wrap justify-center gap-3">
                 <a
