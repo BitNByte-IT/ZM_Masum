@@ -3,7 +3,7 @@
   "private": true,
   "version": "1.0.0",
   "type": "module",
-  "homepage": "https://USERNAME.github.io/zm-masum-portfolio/",
+  "homepage": "https://bitnbyte-it.github.io/ZM_Masum/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
