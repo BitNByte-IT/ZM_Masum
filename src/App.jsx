@@ -1,29 +1,26 @@
+import { useState, useEffect } from "react";
 import { profile, roles, services, stats, gallery } from "./data.js";
 
-/* Graceful image fallback: if a photo isn't supplied yet, show a styled slot. */
-function Img({ src, alt, className }) {
+/* Renders the image or a placeholder slot — uses React state so it resets correctly when src changes. */
+function MediaSlot({ src, alt, imgClassName, label }) {
+  const [failed, setFailed] = useState(false);
+  useEffect(() => { setFailed(false); }, [src]);
+
+  if (failed) {
+    return (
+      <div className="absolute inset-0 grid place-items-center bg-panel2 text-mute text-xs tracking-wide">
+        <span className="border border-line rounded-md px-3 py-1.5">{label}</span>
+      </div>
+    );
+  }
   return (
     <img
       src={src}
       alt={alt}
       loading="lazy"
-      className={className}
-      onError={(e) => {
-        e.currentTarget.style.display = "none";
-        e.currentTarget.nextElementSibling?.removeAttribute("hidden");
-      }}
+      className={imgClassName}
+      onError={() => setFailed(true)}
     />
-  );
-}
-
-function Slot({ label }) {
-  return (
-    <div
-      hidden
-      className="absolute inset-0 grid place-items-center bg-panel2 text-mute text-xs tracking-wide"
-    >
-      <span className="border border-line rounded-md px-3 py-1.5">{label}</span>
-    </div>
   );
 }
 
@@ -98,12 +95,12 @@ export default function App() {
             </div>
 
             <div className="fade-up d3 relative aspect-square rounded-2xl overflow-hidden border border-line shadow-glow">
-              <Img
+              <MediaSlot
                 src={profile.photo}
                 alt={profile.name}
-                className="h-full w-full object-cover"
+                imgClassName="h-full w-full object-cover"
+                label="Add portrait → images/portrait.jpg"
               />
-              <Slot label="Add portrait → images/portrait.jpg" />
               <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-ink to-transparent p-4">
                 <p className="font-display font-700 text-xl text-slate-50">{profile.name}</p>
                 <p className="text-sm text-gold">CEO · Managing Director</p>
@@ -151,12 +148,12 @@ export default function App() {
                 className="group rounded-2xl border border-line bg-panel/50 overflow-hidden hover:border-azure/60 transition"
               >
                 <div className="relative aspect-[16/9] overflow-hidden">
-                  <Img
+                  <MediaSlot
                     src={r.image}
                     alt={r.company}
-                    className="h-full w-full object-cover group-hover:scale-105 transition duration-500"
+                    imgClassName="h-full w-full object-cover group-hover:scale-105 transition duration-500"
+                    label={`Add image → ${r.image}`}
                   />
-                  <Slot label={`Add image → ${r.image}`} />
                   {r.current && (
                     <span className="absolute top-3 left-3 text-[11px] font-600 rounded-full bg-gold/90 text-ink px-2.5 py-1">
                       Current
@@ -211,8 +208,12 @@ export default function App() {
                 key={g.src}
                 className="relative aspect-[4/3] rounded-xl overflow-hidden border border-line"
               >
-                <Img src={g.src} alt={g.caption} className="h-full w-full object-cover" />
-                <Slot label={`Add → ${g.src}`} />
+                <MediaSlot
+                  src={g.src}
+                  alt={g.caption}
+                  imgClassName="h-full w-full object-cover"
+                  label={`Add → ${g.src}`}
+                />
               </figure>
             ))}
           </div>
