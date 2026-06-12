@@ -5,6 +5,5 @@ import react from "@vitejs/plugin-react";
 // If you deploy to a custom domain or a <username>.github.io root repo, use "/".
 export default defineConfig({
   plugins: [react()],
-  base: "/ZM_Masum/",
-  // base: "/",
+  base: process.env.VERCEL ? "/" : "/ZM_Masum/",
 });
