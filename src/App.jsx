@@ -99,11 +99,11 @@ export default function App() {
               </div>
             </div>
 
-            <div className="fade-up d3 relative aspect-square rounded-2xl overflow-hidden border border-line shadow-glow">
+            <div className="fade-up d3 group relative aspect-square rounded-2xl overflow-hidden border border-line shadow-glow">
               <MediaSlot
                 src={profile.photo}
                 alt={profile.name}
-                imgClassName="h-full w-full object-cover"
+                imgClassName="h-full w-full object-cover transition duration-500 group-hover:scale-105"
                 label="Add portrait → images/portrait.jpg"
               />
               <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-ink to-transparent p-4">
