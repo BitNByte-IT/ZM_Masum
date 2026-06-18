@@ -9,8 +9,7 @@ export const profile = {
   tagline: "Transport Entrepreneur & Compliance Consultant",
   headline: "Delivering trusted transport solutions through leadership, compliance, and operational excellence.",
   intro:
-    "An accomplished transport entrepreneur and business leader with extensive expertise in transport operations, commercial logistics, and regulatory compliance. Through ZSM Transport Agency and Alishan Transport, ZM Masum delivers professional consultancy and comprehensive document solutions, ensuring transport businesses and vehicle owners meet regulatory requirements with confidence, efficiency, and reliability.",
-  // Replace with your portrait. Square image looks best (e.g. 800×800).
+    "An accomplished transport entrepreneur and industry leader with deep expertise in logistics, fleet operations, commercial transportation, and regulatory compliance. Through ZSM Transport Agency and Alishan Transport, ZM Masum delivers dependable transport solutions, helping businesses move goods safely, efficiently, and on schedule. In addition, he provides specialized transport consultancy and comprehensive documentation services, helping transport operators and vehicle owners navigate regulatory requirements, manage compliance obligations, and maintain smooth business operations with confidence.",
   photo: "images/portrait.jpg",
   location: "Dhaka, Bangladesh",
 
