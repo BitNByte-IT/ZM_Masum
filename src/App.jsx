@@ -108,7 +108,8 @@ export default function App() {
               />
               <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-ink to-transparent p-4">
                 <p className="font-display font-700 text-xl text-slate-50">{profile.name}</p>
-                <p className="text-sm text-gold">CEO · Managing Director</p>
+                <p className="text-sm text-gold leading-snug">CEO & Founder · ZSM Transport Agency</p>
+                <p className="text-sm text-gold/70 leading-snug">MD & Co-Founder · Alishan Transport</p>
               </div>
             </div>
           </div>
@@ -146,7 +147,7 @@ export default function App() {
           <h2 className="font-display font-700 text-2xl sm:text-3xl text-slate-50 mb-8">
             Roles &amp; companies
           </h2>
-          <div className="grid sm:grid-cols-2 gap-5">
+          <div className="grid sm:grid-cols-3 gap-5">
             {roles.map((r) => (
               <article
                 key={r.company}

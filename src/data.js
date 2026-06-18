@@ -80,6 +80,6 @@ export const stats = [
 // Optional gallery — drop transport / fleet photos here.
 export const gallery = [
   { src: "images/fleet-1.jpg", caption: "Fleet on route" },
-  { src: "images/fleet-2.jpg", caption: "Loading operations" },
-  { src: "images/fleet-3.jpg", caption: "Documentation desk" },
+  { src: "images/fleet-2.png", caption: "Covered Vans" },
+  { src: "images/fleet-3.png", caption: "Alishan Van" },
 ];
